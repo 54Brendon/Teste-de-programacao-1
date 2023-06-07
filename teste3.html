@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Divisor de Conta</title>
+  </head>
+  <body>
+    <h1>Divisor de conta de restaurante</h1>
+
+    <!-- Div inicial para obtenção dos consumidores -->
+    <div>
+      <p>Quem consumiu?</p>
+      <input type="text" id="nome" name="nome">&nbsp;&nbsp;
+      <button id="adicionarPessoa" onclick="adicionaPessoa()">Adicionar</button>
+      <br>
+      <div class="avisoPessoa" id="avisoPessoa"></div>
+      <br>
+      <button id="limpaNome" onclick="limpaCampoNome()">Nova Pessoa</button>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Div para obtermos os itens consumidos e seus valores-->
+    <div>
+      <p>O que será dividido, qual o valor e por quem?</p>
+      <div id="itens">
+        <input type="text" id="item" name="item" placeholder="Consumo">&nbsp;&nbsp;
+        <input type="number" id="preco" name="preco" placeholder="00.00">&nbsp;&nbsp;
+        <button id="adicionarItem" onclick="adicionarItem()">Adicionar</button>
+        <br>
+        <!-- Espaço para os nomes obtidos -->
+        <div class="nomes"></div>
+        <br>
+        <div id="avisoItem"></div>
+        <br>
+        <button id="limpaNome" onclick="limpaCampoItem()">Novo Consumo</button>
+        <br>
+      </div>
+    </div>
+
+    <br>
+    <!-- Gorjeta -->
+    <div>
+      <br>
+      <p>Alguém vai pagar a gorjeta?</p>
+      <div id="nomesParaGorjeta"></div>
+    </div>
+
+    <br>
+    <button id="calculaConta" class="final" onclick="divisorConta()">Calcular valores</button>
+    <hr>
+    <!-- Valores finais de pagamento -->
+    <div id="resultados"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
